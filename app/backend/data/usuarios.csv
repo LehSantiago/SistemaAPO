@@ -1,0 +1,6 @@
+id,nome,email,senha,tipo,matricula,pontos_total
+1,Letícia Santiago,aluno@teste.com,123456,aluno,10420655,3
+2,Prof. Dr. Ana Beatriz Lima,orientador@teste.com,123456,orientador,32396414,0
+3,Prof. Carlos Mendes,comissao@teste.com,123456,comissao,15698758,0
+4,Prof. Dr. Maria Santos,coordenacao@teste.com,123456,coordenacao,89545200,0
+5,Secretária Paula Costa,secretaria@teste.com,123456,secretaria,23456789,0
