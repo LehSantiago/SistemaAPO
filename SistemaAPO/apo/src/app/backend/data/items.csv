@@ -1,0 +1,2 @@
+id,aluno_matricula,arquivo_assinado,aluno_id,tipo,titulo,descricao,arquivo,status,pontos,data_submissao,data_aprovacao,data_aprovacao_orientador,data_aprovacao_comissao,data_aprovacao_coordenacao,comentario_orientador,comentario_comissao,comentario_coordenacao
+1,10420655,uploads\assinado_20251125_000203_testeSof.pdf,1,workshop,",,,,koko",jojojo,uploads\20251124_235942_dash.pdf,aprovado_final,3,24/11/2025 23:59,,25/11/2025 00:00,25/11/2025 00:00,25/11/2025 00:00,,nn,

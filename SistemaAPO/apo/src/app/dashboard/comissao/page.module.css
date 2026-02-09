@@ -1,0 +1,552 @@
+/* src/app/dashboard/comissao/page.module.css */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+}
+
+.loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.header {
+  background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.backButton, .logoutButton {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.headerIcon {
+  font-size: 2.5rem;
+}
+
+.headerTitle {
+  font-size: 1.75rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.headerSubtitle {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+.content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Fluxo de Aprovação */
+.fluxoContainer {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.fluxoStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stepNumber {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.fluxoStep.completed .stepNumber {
+  background: #10b981;
+  color: white;
+}
+
+.fluxoStep.active .stepNumber {
+  background: #f59e0b;
+  color: white;
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2);
+}
+
+.stepLabel {
+  font-size: 0.875rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.fluxoArrow {
+  font-size: 1.5rem;
+  color: #d1d5db;
+}
+
+/* Card do Aluno */
+.alunoCard {
+  background: #d1fae5;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid #10b981;
+}
+
+.aprovadoBadge {
+  background: #10b981;
+  color: white;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.itemTitle {
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.itemSubtitle {
+  color: #374151;
+  margin: 0 0 1rem 0;
+  font-size: 0.9rem;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.metaLabel {
+  font-size: 0.75rem;
+  color: #065f46;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metaValue {
+  font-size: 0.95rem;
+  color: #1f2937;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.diasPendentes {
+  font-size: 0.95rem;
+  color: #dc2626;
+  font-weight: 700;
+  margin-top: 0.25rem;
+}
+
+/* Tabs */
+.tabsContainer {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab {
+  flex: 1;
+  padding: 1rem;
+  background: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: #6b7280;
+}
+
+.tab:hover {
+  background: #f3f4f6;
+}
+
+.tabActive {
+  background: #f59e0b !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+/* Detalhes Content */
+.detalhesContent {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1.5rem;
+}
+
+.atividadeCard, .acaoCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  color: #1f2937;
+  margin: 0 0 1.5rem 0;
+  font-weight: 700;
+}
+
+.badge {
+  background: #6366f1;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  margin-right: 0.5rem;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoLabel {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.infoValue {
+  font-weight: 600;
+  color: #1f2937;
+  margin-top: 0.25rem;
+}
+
+.descricaoSection {
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  color: #1f2937;
+  margin: 0 0 0.75rem 0;
+  font-weight: 600;
+}
+
+.descricaoText {
+  color: #374151;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Orientador Section */
+.orientadorSection {
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.orientadorHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.orientadorAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #10b981;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.orientadorNome {
+  font-size: 1rem;
+  color: #1f2937;
+  margin: 0;
+  font-weight: 600;
+}
+
+.orientadorCargo {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 0.25rem 0 0 0;
+}
+
+.parecerBox {
+  background: white;
+  border-left: 4px solid #10b981;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.parecerTexto {
+  color: #374151;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Ação Card */
+.parecerSection {
+  margin-bottom: 1.5rem;
+}
+
+.parecerLabel {
+  display: block;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.parecerTextarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  resize: vertical;
+}
+
+.btnValidar {
+  width: 100%;
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnValidar:hover {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* Documentos Content */
+.documentosContent {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.documentoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.docIcon {
+  font-size: 1.5rem;
+}
+
+.docInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.docName {
+  font-size: 0.9rem;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.docSize {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.downloadButton {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Histórico Content */
+.historicoContent {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.timelineItem {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.timelineItem:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 30px;
+  width: 2px;
+  height: calc(100% - 10px);
+  background: #e5e7eb;
+}
+
+.timelineDot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #10b981;
+  flex-shrink: 0;
+}
+
+.timelineContent h4 {
+  font-size: 1rem;
+  color: #1f2937;
+  margin: 0 0 0.25rem 0;
+  font-weight: 600;
+}
+
+.timelineContent p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Lista Items */
+.listaTitle {
+  color: white;
+  font-size: 2rem;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+}
+
+.itemsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.itemListCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.itemListCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.itemListTitle {
+  font-size: 1.125rem;
+  color: #1f2937;
+  margin: 0 0 0.5rem 0;
+}
+
+.itemListAluno {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+}
+
+.itemListStatus {
+  color: #10b981;
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+  font-weight: 600;
+}
+
+.emptyState {
+  color: white;
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 1024px) {
+  .detalhesContent {
+    grid-template-columns: 1fr;
+  }
+  
+  .metaGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .fluxoContainer {
+    flex-wrap: wrap;
+  }
+  
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+}
