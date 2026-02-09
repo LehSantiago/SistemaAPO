@@ -64,6 +64,7 @@ Sistema web completo que automatiza **100%** do fluxo acadêmico com:
 │ SECRETARIA  │ Formaliza e encerra processo
 └─────────────┘
 ```
+![Demonstração do Sistema APO](gifDemo.gif)
 
 Cada transição é registrada, auditável e notificada automaticamente.
 
@@ -127,7 +128,6 @@ Next.js 14      │ Framework React de última geração
 React 18        │ Biblioteca UI com hooks modernos
 TypeScript      │ Tipagem estática (planejado)
 Tailwind CSS    │ Estilização utilitária
-Shadcn/UI       │ Componentes acessíveis
 ```
 
 ### Backend
